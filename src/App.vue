@@ -1,5 +1,7 @@
 <template>
+
   <div id="app">
+    
     <Header></Header>
     <Selector></Selector>
   </div>
@@ -11,6 +13,10 @@ import 'bootstrap'; import 'bootstrap/dist/css/bootstrap.min.css';
 import Selector from "@/components/Selector";
 export default {
   name: 'App',
+  title: '',
+  metaInfo: {
+      title: 'SJO GPU Comparador'
+    },
   components: {
     Selector,
     Header,
