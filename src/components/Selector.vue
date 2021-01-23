@@ -342,7 +342,7 @@
           <span >{{ (gpu1.benchmarks.reduce((a, b) => a + b, 0) / gpu1.price).toFixed(2) }} puntos / €</span>
           <div v-if="gpu2.benchmarks.reduce((a, b) => a + b, 0) / gpu2.price < gpu1.benchmarks.reduce((a, b) => a + b, 0) / gpu1.price" class="progressbar">
                 <b-progress variant="success"  :max="100" show-progress animated>
-                <b-progress-bar :value="(gpu1.benchmarks.reduce((a, b) => a + b, 0) / gpu1.price) * 100 / (gpu2.benchmarks.reduce((a, b) => a + b, 0)/ gpu1.price)" >
+                <b-progress-bar :value="((gpu1.benchmarks.reduce((a, b) => a + b, 0) / gpu1.price) * 100 / (gpu2.benchmarks.reduce((a, b) => a + b, 0)/ gpu1.price)-100).toFixed(2)" >
                   + {{((gpu1.benchmarks.reduce((a, b) => a + b, 0) / gpu1.price) * 100 / (gpu2.benchmarks.reduce((a, b) => a + b, 0)/ gpu2.price) -100).toFixed(2)}} %
                 </b-progress-bar>
                </b-progress>
@@ -354,7 +354,7 @@
           <span >{{ (gpu2.benchmarks.reduce((a, b) => a + b, 0) / gpu2.price).toFixed(2) }} puntos / €</span>
           <div v-if="gpu1.benchmarks.reduce((a, b) => a + b, 0) / gpu1.price < gpu2.benchmarks.reduce((a, b) => a + b, 0) / gpu2.price" class="progressbar">
                 <b-progress variant="success"  :max="100" show-progress animated>
-                <b-progress-bar :value="((gpu2.benchmarks.reduce((a, b) => a + b, 0) / gpu2.price) * 100 / (gpu1.benchmarks.reduce((a, b) => a + b, 0)/ gpu1.price)).toFixed(2)" >
+                <b-progress-bar :value="((gpu2.benchmarks.reduce((a, b) => a + b, 0) / gpu2.price) * 100 / (gpu1.benchmarks.reduce((a, b) => a + b, 0)/ gpu1.price) -100).toFixed(2)" >
                  + {{((gpu2.benchmarks.reduce((a, b) => a + b, 0) / gpu2.price) * 100 / (gpu1.benchmarks.reduce((a, b) => a + b, 0)/ gpu1.price) -100).toFixed(2)}} %
                 </b-progress-bar>
                </b-progress>
