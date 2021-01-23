@@ -392,7 +392,7 @@ export default {
   },
   methods:{
     getGPU: async function (){
-      const response = await axios.get("http://localhost:8000/gpus")
+      const response = await axios.get("https://gpusjoapi.herokuapp.com/gpus")
       this.gpus = response.data
       console.log(this.gpus)
     },
