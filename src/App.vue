@@ -1,14 +1,13 @@
 <template>
 
   <div id="app">
-    
-    <Header></Header>
+   
     <Selector></Selector>
   </div>
 </template>
 
 <script>
-import Header from "@/components/Header";
+
 import 'bootstrap'; import 'bootstrap/dist/css/bootstrap.min.css';
 import Selector from "@/components/Selector";
 export default {
@@ -19,7 +18,7 @@ export default {
     },
   components: {
     Selector,
-    Header,
+   
   }
 }
 </script>
