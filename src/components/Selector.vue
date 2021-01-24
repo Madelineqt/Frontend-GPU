@@ -4,7 +4,7 @@
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
                 <img src="logoSJO.png">
-                <h1 class="display-4" style="font-size: 2.5rem;">Ver reservas en tabla</h1>
+                <h1 class="display-4" style="font-size: 2.5rem;">Comparar GPUs</h1>
             </div>
         </div>
     </section>
