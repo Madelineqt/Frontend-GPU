@@ -321,6 +321,35 @@
         </div>
       </div>
    </div>
+    <div class="row">
+     <div class="col-12">
+      <h1>Memoria</h1><br><p>GB de memoria</p>
+    </div>
+      <div class="col-6">
+        <div class="result">
+          <span >{{ gpu1.memory }} GB</span>
+          <div v-if="gpu2.memory < gpu1.memory" class="progressbar">
+                <b-progress variant="success"  :max="100" show-progress animated>
+                <b-progress-bar :value="gpu1.memory * 100 / gpu2.memory - 100" >
+                  + {{(gpu1.memory * 100 / gpu2.memory - 100).toFixed(2)}} %
+                </b-progress-bar>
+               </b-progress>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+         <div class="result">
+          <span >{{ gpu2.memory }} GB</span>
+          <div v-if="gpu2.memory > gpu1.memory" class="progressbar">
+               <b-progress variant="success"  :max="100" show-progress animated>
+                <b-progress-bar :value="gpu2.memory * 100 / gpu1.memory - 100" >
+                  + {{(gpu2.memory * 100 / gpu1.memory - 100).toFixed(2)}} %
+                </b-progress-bar>
+               </b-progress>
+          </div>
+        </div>
+      </div>
+   </div>
    <div class="row">
      <div class="col-12">
       <h1>Valor</h1><br><p>Calculado con datos de benchmarks y precio</p>
