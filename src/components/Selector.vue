@@ -47,10 +47,10 @@
    <div class="row">
       
       <div class="col-6 ">
-        <div class="imggpu"><img v-bind:src="img1"></div>
+        <div class="imggpu"><img class="imggpu2" v-bind:src="img1"></div>
       </div>
       <div class="col-6 ">
-        <div class="imggpu"><img v-bind:src="img2"></div>
+        <div class="imggpu"><img class="imggpu2" v-bind:src="img2"></div>
       </div>
    </div>
    <div class="row">
@@ -724,5 +724,8 @@ h1, .result, p{
 }
 body{
       overflow-x: hidden;
+}
+.imggpu2{
+  max-height: 300px;
 }
 </style>
